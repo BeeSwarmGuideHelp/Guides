@@ -319,7 +319,29 @@
   </div>
 </div>
 
-  <script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBmdQ14ZqiXB4h3CO9LbhTb-ATwYYOFOec",
+    authDomain: "bssguides.firebaseapp.com",
+    projectId: "bssguides",
+    storageBucket: "bssguides.firebasestorage.app",
+    messagingSenderId: "380243668020",
+    appId: "1:380243668020:web:a1a1b8d2fc1b5f30352e61",
+    measurementId: "G-FRWPEH5LNK"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
     function openModal(id) {
       const modal = document.getElementById(id);
       modal.classList.add('active');
@@ -329,7 +351,9 @@
       const modal = document.getElementById(id);
       modal.classList.remove('active');
     }
-  </script>
+      
+</script>
+  
 
 </body>
 </html>
